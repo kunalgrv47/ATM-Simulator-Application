@@ -42,16 +42,9 @@ The ATM application uses a MySQL database to store user and transaction data. Yo
 - JDBC
 - BCrypt
 
-## Project Structure
-com.atm: Contains classes related to ATM functionality.
-com.bank: Contains classes related to user accounts and transactions.
-com.db: Contains classes for database connection and operations.
-com.security: Contains classes related to security and OTP generation.
-db_resources: Contains the SQL script for creating database tables.
-
 ## Maven Dependency:
-jbcrypt-0.4.jar: A library for handling password hashing and checking.
-mysql-connector-j-8.0.33.jar: The MySQL JDBC driver for database connectivity.
+- jbcrypt-0.4.jar: A library for handling password hashing and checking.
+- mysql-connector-j-8.0.33.jar: The MySQL JDBC driver for database connectivity.
 
 
 ## Acknowledgements
