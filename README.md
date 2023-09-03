@@ -1,6 +1,6 @@
 # ATM-Simulator-Application
 
-This is a simple Java ATM (Automated Teller Machine) application that allows users to perform basic banking operations such as account creation, balance checking, withdrawals, deposits, and viewing transaction history. The application is developed using Java and a MySQL database for data storage.
+A simple Java-based ATM (Automated Teller Machine) simulator that allows users to perform banking operations, manage accounts, and view transaction history.
 
 ## Features
 
@@ -8,8 +8,9 @@ This is a simple Java ATM (Automated Teller Machine) application that allows use
 - Balance Enquiry
 - Deposit and Withdrawal
 - Transaction History
-- MySQL Database Integration
-- Secure user authentication with hashed PIN and salt.
+- MySQL Database Integration using JDBC
+- Secure PIN Handling: Utilizes BCrypt for secure PIN encryption
+- OTP Generation: Generates One-Time Passwords for added security
 
 ## Prerequisites
 
@@ -21,18 +22,22 @@ Before running the ATM application, make sure you have the following prerequisit
 
 ## Getting Started
 
-1. Clone this repository to your local machine.   (Repository Link: https://github.com/kunalgrv47/ATM-Simulator-App.git )
-2. Import the project into your preferred Java IDE (e.g., Eclipse).
-3. Set up the required external libraries for JDBC, MySQL, and BCrypt.
-4. Configure the database connection in the `DatabaseConnection` class.
+To get started with the ATM SIMULATOR APPLICATION, follow these steps:
+
+1. Clone this repository to your local machine.   git clone https://github.com/kunalgrv47/ATM-Simulator-Application.git
+2. Set up the MySQL database as mentioned in the next heading.
+3. Import the project into your preferred Java IDE (e.g., Eclipse).
+4. Configure the database connection in the `DatabaseConnection` class. Update the DB_URL, DB_USERNAME, and DB_PASSWORD with your database URL, username, and password, respectively
 5. Run the `ATMUse` class to start the application.
 
 ## Database Setup
 
-The ATM application uses a MySQL database to store user and transaction data. You should set up the database and configure the connection details in the DatabaseConnection class.
-- Create a MySQL database named atm_app_db.
-- Import the provided SQL schema file (atm_app_db.sql) to create the necessary tables and initial data.
-- Configure the database connection details in the DatabaseConnection class (DB_URL, DB_USERNAME, DB_PASSWORD) to match your MySQL setup.
+Follow these steps to set up the MySQL database for the ATM SIMULATOR APPLICATION:
+1. Install MySQL
+2. Log in to MySQL
+3. Run the SQL Script:
+   Inside the ATM SIMULATOR APPLICATION project directory, you'll find a SQL script named create_table.sql in the db_resources directory. Run this script to create the necessary tables and initial values.
+   
 
 
 ## Technologies Used
@@ -41,10 +46,6 @@ The ATM application uses a MySQL database to store user and transaction data. Yo
 - MySQL
 - JDBC
 - BCrypt
-
-## Maven Dependency:
-- jbcrypt-0.4.jar: A library for handling password hashing and checking.
-- mysql-connector-j-8.0.33.jar: The MySQL JDBC driver for database connectivity.
 
 
 ## Acknowledgements
